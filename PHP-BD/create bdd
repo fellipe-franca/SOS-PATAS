@@ -1,0 +1,37 @@
+create database SOSpatas; 
+
+CREATE TABLE cadastro
+( cod_usuario int(11) NOT NULL,
+e_mail varchar(100) NOT NULL,
+senha varchar(255) NOT NULL,
+confirmasenha varchar(255) NOT NULL,
+tipo_usuario enum('instituicao','tutor') NOT NULL )
+ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE instituicoes
+( id int(11) NOT NULL,
+name varchar(255) NOT NULL,
+location varchar(255) NOT NULL,
+about text NOT NULL,
+date date NOT NULL,
+image varchar(255) NOT NULL,
+social varchar(255) NOT NULL,
+contact varchar(255) NOT NULL,
+usuario_id int(11) DEFAULT NULL )
+ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+	
+CREATE TABLE tutores 
+( id int(11) NOT NULL,
+name varchar(255) NOT NULL,
+usuario_id int(11) DEFAULT NULL ) 
+ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+---Instituições exemplos---
+
+INSERT INTO `instituicoes` (`id`, `name`, `location`, `about`, `date`, `image`, `social`, `contact`, `usuario_id`) 
+VALUES (NULL, 'AMADA - Associação Maranhense em Defesa dos Animais', 'São Luís - MA',
+'Adoção de Animais! Campanha de Proteção Animal! Castração é a solução!', '2005-01-01', 
+'uploads/386837763_1002273287733763_755503866627821660_n.jpg', 'Instagram: https://www.instagram.com/amadasaoluis/', 
+'amada.sl@gmail.com', '7')

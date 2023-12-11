@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Imagens/Logotipo/rodapé.png" />
+    <title>Cadastro de Instituição</title>
+    <link rel="stylesheet" href="..//Imagens/" />
+    <link rel="stylesheet" href="..//CSS/index.css">
+    <link rel="stylesheet" href="..//CSS/style.css">
+
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header>
+      <!---Imagem Logo-->
+      <div id="img-cabecalho">
+        <img
+          id="img-logo"
+          src="..//Imagens/Logotipo/cabeçalho.png"
+          width="80"
+          height="80"
+        />
+      </div>
+      <!---Barra de navegação-->
+      <nav id="menu-h">
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="..//index.html">INÍCIO</a></li>
+          <li><a href="..//Sobre Nós/sobre_nós.html">SOBRE NÓS</a></li>
+          <li><a href="..//noticias.html">NOTICIAS</a></li>
+          <li>
+            <a href="../Cadastro/cadastro.html">
+              <img src="..//Imagens/user.png" width="45px" height="45px" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Conteúdo -->
+    <main>
+      <div class="cadastro">
+        <h1>Cadastro de Instituição</h1>
+      </div>
+        <!-- Formulário de Cadastro -->
+      <div class="formulario">
+          <form action="insert.php" method="POST" enctype="multipart/form-data">
+        <label for="name">Nome da Instituição:</label>
+        <input type="text" name="name" required><br>
+
+        <label for="location">Localização:</label>
+        <input type="text" name="location" required><br>
+
+        <label for="about">Sobre a Instituição:</label>
+        <textarea name="about" required></textarea><br>
+
+        <label for="date">Data de Fundação:</label>
+        <input type="date" name="date" required><br>
+
+        <label for="image">Logo da Instituição:</label>
+        <input type="file" name="image" required><br>
+
+        <label for="social">Redes Sociais:</label>
+        <input type="text" name="social" required><br>
+
+        <label for="contact">Contato:</label>
+        <input type="text" name="contact" required><br>
+
+        <input type="submit" value="Cadastrar Instituição">
+          </form>
+      </div>
+      </main>
+  </body>
+  </html>
+
