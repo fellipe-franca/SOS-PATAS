@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../Imagens/Logotipo/rodapé.png">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="cadastro.css">
+  <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<main>
+  <div class="container">
+    <div class="buttonsForm">
+      <div class="btnColor"></div>
+      <button id="btnSignup">Cadastre-se</button>
+    </div>
+    <form action="./cadastra_usuario_insert.php" method="POST" id="signin">
+      <input type="email" placeholder="Email" id="e_mail" name="e_mail" required />
+      <i class="fas fa-envelope iEmail"></i>
+
+      <input type="password" placeholder="Senha" id="senha" name="senha" required />
+      <i class="fas fa-lock iPassword"></i>
+
+      <input type="password" placeholder="Confirme sua senha" id="confirmasenha" name="confirmasenha" required />
+      <i class="fas fa-lock iPassword2"></i>
+
+      <!-- Adicione um campo de seleção para escolher o tipo de usuário (instituição ou tutor) -->
+      <select id="tipo_usuario" name="tipo_usuario" required>
+        <option value="instituicao">Instituição</option>
+        <option value="tutor">Tutor</option>
+      </select>
+
+      <div class="divCheck">
+      </div>
+      <button type="submit">Cadastrar</button>
+
+      <div class="login-register">
+        <p>Já tem uma conta? <a href="..//Login/login.html" class="login-link">Entre na sua conta</a>
+        </p>
+      </div> 
+      <div class="voltar"><p><a href="..//index.html">Voltar</a></p></div>
+    </form>
+</main>
+</body>
+</html>
+
